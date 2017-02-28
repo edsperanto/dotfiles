@@ -3,7 +3,7 @@
 # variables
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc zshrc"
+files="bashrc vimrc zshrc zshenv"
 
 # create backup
 echo "Moving existing dotfiles to $olddir"

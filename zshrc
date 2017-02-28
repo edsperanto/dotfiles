@@ -189,11 +189,5 @@ alias b=goUpDirectory
 alias nr=newGithubRepo
 alias f=findDirectory
 
-# Git shortcuts
-alias s='git status'
-alias c='git commit -m'
-alias p='git pull'
-alias u='git push'
-
 # Tmux shortcuts
 alias tmux-session=tmuxSession
