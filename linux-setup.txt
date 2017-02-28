@@ -1,0 +1,59 @@
+-- Update --
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+-- Themes --
+$ sudo apt-get install myunity
+$ sudo apt-get install unity-tweak-tool
+$ sudo apt-get install gnome-tweak-tool
+save and unzip themes in ~/usr/share/themes
+
+-- Paper Theme --
+$ sudo add-apt-repository ppa:snwh/pulp
+$ sudo apt-get update
+$ sudo apt-get install paper-icon-theme
+$ sudo apt-get install paper-gtk-theme
+$ sudo apt-get install paper-cursor-theme
+
+-- Node.js --
+$ sudo apt-get -y update
+$ sudo apt-get -y install nodejs npm
+$ sudo npm i -g n
+$ sudo n stable
+$ sudo npm i -g npm
+
+-- git --
+$ sudo apt-get install git
+$ git config --global user.name "Edward Gao"
+$ git config --global user.email "edsperanto@users.noreply.github.com"
+$ git config --global push.default simple
+$ ssh-keygen -t rsa -b 4096 -C "edsperanto@users.noreply.github.com"
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/id_rsa
+copy ~/.ssh/id_rsa.pub to GitHub
+
+-- zsh --
+$ sudo apt-get install zsh
+$ chsh -s $(which zsh)
+$ sudo apt install curl
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+change ZSH_THEME in ~/.zshrc to "pygmalion"
+change plugins in ~/.zshrc to "plugins=(osx git npm brew github node sublime)"
+uncomment "alias zshconf" and "alias ohmyzsh" and change editor to vim
+
+-- vim --
+$ sudo apt-get -y update
+$ sudo apt-get install vim
+$ sudo update-alternatives --config editor
+select vim as default editor
+
+-- create symbolic links --
+use dotfiles repo from GitHub
+
+-- KeePass --
+sudo apt-add-repository ppa:jtaylor/keepass -y
+sudo apt-get update
+sudo apt-get install keepass2 -y
+
+-- xclip --
+
