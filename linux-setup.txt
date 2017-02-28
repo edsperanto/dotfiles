@@ -57,3 +57,24 @@ sudo apt-get install keepass2 -y
 
 -- xclip --
 
+-- Node.js global modules --
+$ sudo npm install -g gulp
+$ sudo npm install -g nodemon
+
+-- redis --
+download tarball from redis.io
+tar xzf redis-x.y.z.tar.gz
+cd redis-x.y.z
+make
+sudo mv src/redis-server /bin/redis-server
+sudo mv src/redis-cli /bin/redis-cli
+sudo sh -c 'echo "vm.overcommit_memory=1" >> /etc/sysctl.conf'
+sudo sysctl vm.overcommit_memory=1
+sudo sh -c 'echo never > /sys/kernel/mm/transparent_hugepage/enabled'
+sudo sh -c 'echo "511" > /proc/sys/net/core/somaxconn'
+add the above line to /etc/rc.local
+sudo cp -R ./src/redis-server /bin/redis-server
+sudo cp -R ./src/redis-cli /bin/redis-cli
+
+-- postgres --
+sudo apt-get install postgresql
