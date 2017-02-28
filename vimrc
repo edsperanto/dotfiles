@@ -135,3 +135,21 @@ set swapfile
 set dir=~/.vim/tmp
 set backupdir=~/.vim/tmp
 set undodir=~/.vim/tmp
+
+" pathogen for apt-vim
+execute pathogen#infect()
+
+" emmet
+let g:user_emmet_leader_key=','
+
+" NERDTree
+" autocmd vimenter * NERDTree
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-d> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" NERDTree arrows
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'

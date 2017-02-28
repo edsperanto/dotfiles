@@ -47,6 +47,13 @@ $ sudo apt-get install vim
 $ sudo update-alternatives --config editor
 select vim as default editor
 
+-- pathogen, emmet, and nerdtree --
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+git clone https://github.com/mattn/emmet-vim.git
+git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
 -- create symbolic links --
 use dotfiles repo from GitHub
 
@@ -60,21 +67,31 @@ sudo apt-get install keepass2 -y
 -- Node.js global modules --
 $ sudo npm install -g gulp
 $ sudo npm install -g nodemon
+$ sudo npm install -g sequelize-cli
 
 -- redis --
 download tarball from redis.io
-tar xzf redis-x.y.z.tar.gz
-cd redis-x.y.z
-make
-sudo mv src/redis-server /bin/redis-server
-sudo mv src/redis-cli /bin/redis-cli
-sudo sh -c 'echo "vm.overcommit_memory=1" >> /etc/sysctl.conf'
-sudo sysctl vm.overcommit_memory=1
-sudo sh -c 'echo never > /sys/kernel/mm/transparent_hugepage/enabled'
-sudo sh -c 'echo "511" > /proc/sys/net/core/somaxconn'
+$ tar xzf redis-x.y.z.tar.gz
+$ cd redis-x.y.z
+$ make
+$ sudo mv src/redis-server /bin/redis-server
+$ sudo mv src/redis-cli /bin/redis-cli
+$ sudo sh -c 'echo "vm.overcommit_memory=1" >> /etc/sysctl.conf'
+$ sudo sysctl vm.overcommit_memory=1
+$ sudo sh -c 'echo never > /sys/kernel/mm/transparent_hugepage/enabled'
+$ sudo sh -c 'echo "511" > /proc/sys/net/core/somaxconn'
 add the above line to /etc/rc.local
-sudo cp -R ./src/redis-server /bin/redis-server
-sudo cp -R ./src/redis-cli /bin/redis-cli
+$ sudo cp -R ./src/redis-server /bin/redis-server
+$ sudo cp -R ./src/redis-cli /bin/redis-cli
 
 -- postgres --
-sudo apt-get install postgresql
+$ sudo apt-get install postgresql
+$ sudo -i -u postgres
+$ createuser --interactive
+> edward
+> y
+$ psql
+# CREATE DATABASE edward OWNER edward;
+# ALTER USER "edward" WITH PASSWORD 'edward';
+# \q
+$ exit
