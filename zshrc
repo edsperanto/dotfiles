@@ -80,6 +80,15 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+function gotoWeek() {
+   cd /Users/Edward/ee160/week$1
+   if [ ! -z $2 ]; then
+      findDirectory $2
+   else
+      ls
+   fi
+}
+
 function goUpDirectory() {
    if [ -z $1 ]; then
       cd ..
@@ -183,8 +192,10 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias h='cd ~;ls'
 alias dl='cd ~/DevLeague;ls'
 alias t='cd ~/tmp;ls'
+alias j='cd ~/Projects'
 
 # Custom shortcuts
+alias w=gotoWeek
 alias b=goUpDirectory
 alias nr=newGithubRepo
 alias f=findDirectory
