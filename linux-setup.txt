@@ -47,12 +47,15 @@ $ sudo apt-get install vim
 $ sudo update-alternatives --config editor
 select vim as default editor
 
--- pathogen, emmet, and nerdtree --
+-- pathogen --
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+-- vim plugins --
 cd ~/.vim/bundle
 git clone https://github.com/mattn/emmet-vim.git
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/scrooloose/nerdtree.git
+git clone git://github.com/jiangmiao/auto-pairs.git
 
 -- create symbolic links --
 use dotfiles repo from GitHub

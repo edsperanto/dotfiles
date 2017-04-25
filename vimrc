@@ -106,7 +106,6 @@ endif
 "
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
-packadd matchit
 
 " tab preferences
 set ts=2
@@ -120,8 +119,6 @@ set noexpandtab
 :imap <C-e> <Esc>
 :vmap <C-e> <Esc>
 :nmap <C-e> <Esc>
-map <C-c> :w !pbcopy
-map <C-v> :p !pbpaste
 
 " navigate vim panes
 nnoremap gh <C-W><C-H>
