@@ -8,8 +8,8 @@ alias p='git pull'
 alias u='git push'
 
 # Practice shortcuts
-alias pjs='cd ~/practices/js'
-alias pc='cd ~/practices/c'
+alias pjs='cd ~/Documents/practices/js'
+alias pc='cd ~/Documents/practices/c'
 
 ###
 # Linux Only
