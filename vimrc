@@ -133,6 +133,29 @@ set dir=~/.vim/tmp
 set backupdir=~/.vim/tmp
 set undodir=~/.vim/tmp
 
+" Map Leader to space
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+
+" Copy/Paste to clipboard
+map <leader>cc "+y
+map <leader>vv "+p
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
+
+" Quick quit
+map <leader>qq :q<cr>
+
+" Quick file reload
+map <leader>e :e<cr>"
+
+" Switch between the last two files
+nnoremap <leader><leader> <C-^>
+
 " pathogen for apt-vim
 execute pathogen#infect()
 
@@ -150,3 +173,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+""""""""""""""""""""""""""""""
+" bufExplorer plugin
+" """"""""""""""""""""""""""""""
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='mru'
+map <leader>o :BufExplorer<cr>

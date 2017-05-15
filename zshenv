@@ -10,6 +10,7 @@ alias u='git push'
 # Practice shortcuts
 alias pjs='cd ~/Documents/practices/js'
 alias pc='cd ~/Documents/practices/c'
+alias pp='cd ~/Documents/practices/python'
 
 ###
 # Linux Only
