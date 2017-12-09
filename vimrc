@@ -28,7 +28,6 @@ else
   set undofile		" keep an undo file (undo changes after closing)
 endif
 set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
@@ -112,6 +111,13 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+" interface settings
+set relativenumber
+set ruler
+set laststatus=2
+set cursorline
+set cursorcolumn
 
 " custom key bindings
 :imap <C-e> <Esc>
