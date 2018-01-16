@@ -28,6 +28,7 @@ elif [[ "$OSTYPE" == "darwin"*  ]]; then
     fin "HomeBrew installed."
 else
     # dunno yet
+    echo "Whatevs"
 fi
 
 warn "Setting up Github environment..."
@@ -73,6 +74,8 @@ if $DEPLOY ; then
     elif [[ "$OSTYPE" == "darwin"*  ]]; then
         brew install nodejs npm
     else
+        echo "Whatevs"
+    fi
     sudo npm i -g n
     sudo n lts
     sudo npm i -g npm
@@ -87,6 +90,8 @@ if $DEPLOY ; then
     elif [[ "$OSTYPE" == "darwin"*  ]]; then
         brew install tmux
     else
+        echo "Whatevs"
+    fi
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 warn "Run tmux, and enter Ctrl+A + I to install plugins."
@@ -99,7 +104,15 @@ if $DEPLOY ; then
     elif [[ "$OSTYPE" == "darwin"*  ]]; then
         brew install zsh
     else
+        echo "Whatevs"
+    fi
     chsh -s $(which zsh)
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 fin "zshell environment set up complete."
+
+warn "Re-copying dotfiles..."
+if $DEPLOY ; then
+    sh ~/dotfiles/make.sh
+fi
+fin "Re-copied dotfiles."
