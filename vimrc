@@ -117,7 +117,6 @@ set relativenumber
 set ruler
 set laststatus=2
 set cursorline
-set cursorcolumn
 
 " custom key bindings
 :imap <C-e> <Esc>
