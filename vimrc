@@ -113,7 +113,6 @@ set shiftwidth=4
 set expandtab
 
 " interface settings
-set background=dark
 set relativenumber
 set ruler
 set laststatus=2
