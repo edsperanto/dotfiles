@@ -18,3 +18,6 @@ alias pp='cd ~/Documents/practices/python'
 ###
 # alias pbcopy='xclip -selection clipboard'
 # alias pbpaste='xclip -selection clipboard -o'
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
